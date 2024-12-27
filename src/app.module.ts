@@ -18,7 +18,7 @@ import { TaskModule } from '@task/task.module';
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
       autoLoadEntities: true,
-      synchronize: true, // TODO: Remove in production
+      // synchronize: true, // TODO: Remove in production
     }),
     TaskModule,
   ],
