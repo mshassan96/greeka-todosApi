@@ -15,17 +15,17 @@ import {
   ApiParam,
   ApiQuery,
 } from '@nestjs/swagger';
-import { TaskService } from './task.service';
+import { UUID } from 'crypto';
+import { Task } from './entities/task.entity';
 import { CreateTaskDto } from './dtos/create-task.dto';
 import { UpdateTaskDto } from './dtos/update-task.dto';
 import { GetTasksDto } from './dtos/get-tasks.dto';
-import { UUID } from 'crypto';
+import { ResponseDto } from './dtos/responses.dto';
+import { TaskService } from './task.service';
 import { formatResponse } from '@src/common/utils/response.util';
 import { RESPONSE_MSG } from '@src/common/constants/response-messages.constant';
 import { TaskPriority } from '@src/common/constants/priorities.constants';
 import { TaskStatus } from '@src/common/constants/status.constants';
-import { ResponseDto } from './dtos/responses.dto';
-import { Task } from './entities/task.entity';
 
 @ApiTags('Tasks')
 @Controller('tasks')
