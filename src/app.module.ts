@@ -19,6 +19,10 @@ import { TaskModule } from '@task/task.module';
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       // synchronize: true, // TODO: Remove in production
+      ssl:
+        process.env.NODE_ENV === 'production'
+          ? { rejectUnauthorized: false }
+          : false,
     }),
     TaskModule,
   ],
