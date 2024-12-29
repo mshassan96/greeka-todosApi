@@ -12,17 +12,14 @@ import { TaskModule } from '@task/task.module';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT, 10),
-      username: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
+      host: "db.uphbojgzjssemvkggawv.supabase.co",
+      port: 5432,
+      username: "postgres",
+      password: "7BakRb*5@zQhHQ6",
+      database: "postgres",
       autoLoadEntities: true,
       // synchronize: true, // TODO: Remove in production
-      ssl:
-        process.env.NODE_ENV === 'production'
-          ? { rejectUnauthorized: false }
-          : false,
+      ssl: { rejectUnauthorized: false }
     }),
     TaskModule,
   ],
