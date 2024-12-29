@@ -11,14 +11,12 @@ import { TaskModule } from '@task/task.module';
       isGlobal: true,
     }),
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'aws-0-ap-southeast-1.pooler.supabase.com',
-      port: 5432, // Session Pooler port
-      username: 'postgres.uphbojgzjssemvkggawv',
-      password: '7BakRb*5@zQhHQ6',
-      database: 'postgres',
+      url: process.env.DATABASE_URL,
       autoLoadEntities: true,
-      ssl: { rejectUnauthorized: false },
+      synchronize: false,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     TaskModule,
   ],
