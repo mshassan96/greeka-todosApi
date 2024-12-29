@@ -24,13 +24,16 @@ exports.AppModule = AppModule = __decorate([
             }),
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
-                host: "db.uphbojgzjssemvkggawv.supabase.co",
+                host: 'dpg-ctorkgd2ng1s73bledog-a',
                 port: 5432,
-                username: "postgres",
-                password: "7BakRb*5@zQhHQ6",
-                database: "postgres",
+                username: 'greekatodos_user',
+                password: 'kiMoK2WLSyi57gPpjuRioHw3T0P3lnCP',
+                database: 'greekatodos',
                 autoLoadEntities: true,
-                ssl: { rejectUnauthorized: false }
+                synchronize: false,
+                ssl: {
+                    rejectUnauthorized: false,
+                },
             }),
             task_module_1.TaskModule,
         ],
