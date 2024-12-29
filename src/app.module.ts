@@ -12,11 +12,11 @@ import { TaskModule } from '@task/task.module';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'aws-0-ap-southeast-1.pooler.supabase.com',
-      port: 6543, // Transaction Pooler port
-      username: 'postgres.uphbojgzjssemvkggawv',
-      password: '7BakRb*5@zQhHQ6',
-      database: 'postgres',
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT, 10), // Transaction Pooler port
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME,
       autoLoadEntities: true,
       ssl: { rejectUnauthorized: false },
     }),
