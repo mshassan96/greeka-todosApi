@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.formatResponse = void 0;
+exports.formatResponse = formatResponse;
 function formatResponse(success, message, data = null, statusCode = 200) {
     return {
         success,
@@ -9,5 +9,4 @@ function formatResponse(success, message, data = null, statusCode = 200) {
         data,
     };
 }
-exports.formatResponse = formatResponse;
 //# sourceMappingURL=response.util.js.map

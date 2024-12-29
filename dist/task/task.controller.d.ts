@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { UUID } from 'crypto';
 import { Task } from './entities/task.entity';
 import { CreateTaskDto } from './dtos/create-task.dto';

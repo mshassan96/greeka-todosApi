@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { Repository } from 'typeorm';
 import { UUID } from 'crypto';
 import { Task } from './entities/task.entity';
