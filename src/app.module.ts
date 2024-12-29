@@ -12,16 +12,13 @@ import { TaskModule } from '@task/task.module';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'dpg-ctorkgd2ng1s73bledog-a',  
-      port: 5432,                          
-      username: 'greekatodos_user',        
-      password: 'kiMoK2WLSyi57gPpjuRioHw3T0P3lnCP',
-      database: 'greekatodos',
+      host: 'aws-0-ap-southeast-1.pooler.supabase.com',
+      port: 6543, // Transaction Pooler port
+      username: 'postgres.uphbojgzjssemvkggawv',
+      password: '7BakRb*5@zQhHQ6',
+      database: 'postgres',
       autoLoadEntities: true,
-      synchronize: false, // Set to false in production
-      ssl: { 
-        rejectUnauthorized: false,  // Allow SSL connections
-      },
+      ssl: { rejectUnauthorized: false },
     }),
     TaskModule,
   ],
